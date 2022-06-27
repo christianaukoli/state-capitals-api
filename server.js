@@ -3,6 +3,8 @@ const app = express()
 const cors = require("cors")
 const PORT = 8000
 
+app.use('/js', express.static('js'));
+app.use('/css', express.static('css'));
 app.use(cors())
 
 const states = {
