@@ -1,8 +1,10 @@
 const express = require("express")
 const app = express()
-const cors = require("cors")
+const cors = require("cors");
+//const { response } = require("express");
 const PORT = 8000
 
+//app.set("view engine", "ejs")
 app.use('/js', express.static('js'));
 app.use('/css', express.static('css'));
 app.use(cors())
@@ -319,7 +321,7 @@ app.get("/", (request, response)=>{
     response.sendFile(__dirname + "/index.html")
 })
 
-app.get("/api/:name", (request, response)=>{
+app.get("/api/states/:name", (request, response)=>{
     const stateName = request.params.name.toLowerCase()
     
     if(states[stateName]){
@@ -328,6 +330,10 @@ app.get("/api/:name", (request, response)=>{
         response.json(states["unknown"])
     }
     
+})
+
+app.get("/api/states", (request, response)=>{
+    return response.json(states)
 })
 
 app.listen(process.env.PORT || PORT, ()=>{

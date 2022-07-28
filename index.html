@@ -16,9 +16,23 @@
 -->
     <h1>State Capitals Finder</h1>
     <p>Enter a state below:</p>
-    <input type="text">
+   <!-- <input type="text">-->
+    <!-- <form name="dropdown" id="dropdown" action="">
+        <select name="states" id="states">
+            <option value="" selected="selected">Choose a State
+            </option>
+        </select>
+    </form>
     <button>Find My Capital</button>
-    <h2>Capital: </h2>
+    <h2>Capital: </h2> -->
+
+   <form action="/api/states" method="GET">
+        <label for="state">Enter a state:</label>
+        <input type="text" name="state" id="state" list="state_list">
+        <datalist id="state_list"></datalist>
+        <button type="submit">Find my capital</button>
+        </form>
+        <h2>Capital: <span id="capital"></span></h2> 
 
     <script src='js/main.js'></script>
 </body>
