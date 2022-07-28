@@ -41,7 +41,7 @@ const capital = document.getElementById('capital');
 (() => {
 
 	// your local url to fetch
-	const url = "http://localhost:8000/api/states";
+	const url = "https://state-capitals-api.herokuapp.com/api/states";
 	fetch(url)
 	.then(
 		function(res){
@@ -72,7 +72,7 @@ const capital = document.getElementById('capital');
 		if(stateName)
 		{
 
-		fetch(`http://localhost:8000/api/states/${stateName}`)
+		fetch(`https://state-capitals-api.herokuapp.com/api/states/${stateName}`)
 		.then(
 			function(res){
 			if (res.status !== 200) {
