@@ -27,16 +27,18 @@
     <h2>Capital: </h2> -->
 
    <form action="/api/states" method="GET">
-        <label for="state">Enter a state:</label>
+        <!-- <label for="state">Enter a state:</label> -->
         <input type="text" name="state" id="state" list="state_list">
         <datalist id="state_list"></datalist>
-        <button type="submit">Find my capital</button>
+        <button type="submit">Find My Capital</button>
         </form>
-        <h2>Capital: <span id="capital"></span></h2> 
+        <h2>Capital: <br>
+            <span id="capital"></span>
+        </h2> 
 
     <script src='js/main.js'></script>
 </body>
 <footer>
-    <p>Please use https://state-capitals-api.herokuapp.com/api/ + the state name to access API</p>
+    <p>Please use https://state-capitals-api.herokuapp.com/api/states to access API</p>
 </footer>
 </html>
