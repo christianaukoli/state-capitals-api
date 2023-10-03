@@ -2,7 +2,7 @@
 async function loadDropdown(){
 	const stateList = document.getElementById("states")
 	try{
-        const response = await fetch(`https://state-capitals-api.herokuapp.com/api/states`)
+        const response = await fetch(`https://state-capitals-api.onrender.com/api/states`)
         const data = await response.json()
 
         console.log(data)
@@ -19,7 +19,7 @@ async function apiRequest(){
     const stateName = document.querySelector('input').value //change input to menu option
     //const stateName = document.querySelector('#states').value
     try{
-        const response = await fetch(`https://state-capitals-api.herokuapp.com/api/${stateName}`)
+        const response = await fetch(`https://state-capitals-api.onrender.com/api/${stateName}`)
         const data = await response.json()
 
         console.log(data)
@@ -41,7 +41,7 @@ const capital = document.getElementById('capital');
 (() => {
 
 	// your local url to fetch
-	const url = "https://state-capitals-api.herokuapp.com/api/states";
+	const url = "https://state-capitals-api.onrender.com/api/states";
 	fetch(url)
 	.then(
 		function(res){
@@ -72,7 +72,7 @@ const capital = document.getElementById('capital');
 		if(stateName)
 		{
 
-		fetch(`https://state-capitals-api.herokuapp.com/api/states/${stateName}`)
+		fetch(`https://state-capitals-api.onrender.com/api/states/${stateName}`)
 		.then(
 			function(res){
 			if (res.status !== 200) {
